@@ -31,7 +31,7 @@ Approval rates at the 1/6 cut-off, averaged over the 25 test folds:
 |---|---|---|---|
 | Age 18 to 25 | 38 | 42% | 22% |
 | Age 26 to 35 | 80 | 56% | 31% |
-| Age 36 to 50 | 60 | 66% | 35% |
+| Age 36 to 50 | 60 | 66% | 34% |
 | Age 51+ | 23 | 68% | 44% |
 | A92: female, divorced/separated/married | 62 | 49% | 22% |
 | A93: male, single | 110 | 63% | 34% |
@@ -42,11 +42,11 @@ Applicants aged 25 or under are approved far less often than those over 50 (42% 
 
 | Framework | Packages installed | Install size (MB) | Import time (s) | Fraud train time (s) | German train time (s) |
 |---|---|---|---|---|---|
-| XGBoost | 3 | 256 | 0.73 | 1.1 | 0.74 |
-| fastai | 88 | 1,749 | 2.28 | 2.5 | 0.65 |
-| Keras (TensorFlow) | 32 | 1,460 | 2.42 | 23.6 | 1.98 |
-| TabNet | 20 | 1,390 | 1.74 | 47.4 | 1.21 |
-| Lightning | 19 | 1,257 | 2.80 | 1.7 | 1.06 |
+| XGBoost | 3 | 256 | 0.77 | 1.1 | 0.74 |
+| fastai | 88 | 1,749 | 2.15 | 2.5 | 0.65 |
+| Keras (TensorFlow) | 32 | 1,460 | 2.29 | 23.6 | 1.98 |
+| TabNet | 20 | 1,390 | 1.66 | 47.4 | 1.21 |
+| Lightning | 19 | 1,257 | 2.70 | 1.7 | 1.06 |
 
 How these were measured:
 

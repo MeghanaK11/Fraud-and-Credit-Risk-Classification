@@ -50,6 +50,14 @@ def _norm(name):
     return re.sub(r"[-_.]+", "-", name).lower()
 
 
+def _installed(name):
+    try:
+        metadata.distribution(name)
+        return True
+    except metadata.PackageNotFoundError:
+        return False
+
+
 def dependency_closure(root):
     """Installed distributions reachable from root through required
     (non-extra) dependencies."""
@@ -120,6 +128,8 @@ def main():
     times = train_times()
     rows = []
     for name, (dist, stmt) in FRAMEWORKS.items():
+        if name == "Keras" and not _installed(dist):
+            dist = "tensorflow"  # Colab and most installs use the full package
         closure = dependency_closure(dist)
         rows.append(dict(
             framework=name,

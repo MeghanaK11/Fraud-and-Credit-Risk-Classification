@@ -52,7 +52,7 @@ What we take from it:
 | `person_a/` | XGBoost and fastai, cost-based thresholds, card-testing cost model, velocity features, time vs random split, EDA figures. See `person_a/README.md`. |
 | `person_b/` | Keras and TabNet notebooks, calibration, TabNet attention vs SHAP, embeddings vs one-hot. See `person_b/README.md`. |
 | `person_c/` | PyTorch Lightning on both datasets, fairness on German Credit, simplicity measurements. See `person_c/README.md`. |
-| `results/` | All CSVs and figures, one folder per person, plus the combined summary. |
+| `results/` | All CSVs and figures, one folder per person, plus the combined summary and team figures in `results/figures/`. |
 
 ## How to run
 
@@ -65,6 +65,7 @@ python3 person_c/fraud_lightning.py
 python3 person_c/german_lightning.py
 python3 person_c/simplicity.py           # needs the other results first
 python3 summarize_results.py
+python3 make_summary_figures.py    # fig5 (all frameworks) and fig6 (fairness by age)
 ```
 
 Person B's notebooks also run in Colab: clone the repo, open a notebook from inside it, and run all cells.
