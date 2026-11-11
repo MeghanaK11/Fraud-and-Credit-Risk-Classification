@@ -10,10 +10,10 @@ on the inner training partition.
 - One-hot: standardized numeric columns plus one-hot encoded categorical columns.
 
 ## Results (means across folds)
-- PR-AUC: embeddings 0.4670; one-hot 0.4892. Higher is better; one-hot scored higher.
-- ROC-AUC: embeddings 0.6638; one-hot 0.6998.
-- Brier: embeddings 0.1972; one-hot 0.1921. Lower is better; one-hot scored lower.
-- Mean cost at threshold 1/6: embeddings 0.6964; one-hot 0.6552.
+- PR-AUC: embeddings 0.4501; one-hot 0.5025. Higher is better; one-hot scored higher.
+- ROC-AUC: embeddings 0.6580; one-hot 0.7115.
+- Brier: embeddings 0.2009; one-hot 0.1903. Lower is better; one-hot scored lower.
+- Mean cost at threshold 1/6: embeddings 0.7034; one-hot 0.6506.
 
 ## Interpretation limits
 This is an encoding ablation for this particular dataset, model configuration and

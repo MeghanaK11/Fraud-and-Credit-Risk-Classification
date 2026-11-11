@@ -1,0 +1,6 @@
+framework,pip_package,packages,install_mb,import_seconds,fraud_train_seconds,german_train_seconds
+XGBoost,xgboost,3,256.1,0.73,1.14,0.74
+fastai,fastai,88,1748.6,2.28,2.48,0.65
+Keras,tensorflow-cpu,32,1459.7,2.42,23.6,1.98
+TabNet,pytorch-tabnet,20,1390.2,1.74,47.45,1.21
+Lightning,lightning,19,1257.2,2.8,1.71,1.06

@@ -1,0 +1,2 @@
+model,dataset,repeat,fold,pr_auc,roc_auc,brier,rmse,mae,cost_threshold_05,cost_threshold_0167
+Keras,German Credit,0,0,0.5740292750807066,0.7951190476190476,0.1678261160850525,0.4096658590669382,0.32116463780403137,0.99,0.46

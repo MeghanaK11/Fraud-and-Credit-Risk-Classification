@@ -7,3 +7,4 @@ python3 person_a/analysis_cost.py
 python3 person_a/analysis_attack.py
 python3 person_a/run_german.py
 python3 person_a/make_figures.py
+python3 person_a/make_eda_figures.py

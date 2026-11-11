@@ -145,9 +145,8 @@ def main():
     rows = []
     fairness_rows = []
 
-    for repeat, fold, train_idx, test_idx in german_cv_splits(
-        df, n_splits=5, n_repeats=5, seed=42
-    ):
+    # Default seed, so the folds match XGBoost, fastai, Keras and TabNet.
+    for repeat, fold, train_idx, test_idx in german_cv_splits(df):
         seed = 42 + repeat * 5 + fold
 
         X_train = X.iloc[train_idx]
@@ -240,7 +239,7 @@ def main():
         "train_seconds": "mean"
     })
 
-    summary.to_csv(OUT / "lightning_seed_summary.csv")
+    summary.to_csv(OUT / "lightning_german_repeat_summary.csv")
 
     fairness = pd.DataFrame(fairness_rows)
     fairness.to_csv(OUT / "lightning_fairness.csv", index=False)
