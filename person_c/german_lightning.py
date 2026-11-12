@@ -23,6 +23,7 @@ from common.data import (
     GERMAN_CATEGORICAL, GERMAN_COST_FN, GERMAN_COST_FP,
     german_cv_splits
 )
+from common.metrics import probability_metrics
 
 OUT = ROOT / "results" / "person_c"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -170,6 +171,10 @@ def main():
             "roc_auc": roc_auc_score(y_test, probabilities),
             "pr_auc": average_precision_score(y_test, probabilities),
             "brier": brier_score_loss(y_test, probabilities),
+            # The brief's regression metrics, on predicted probabilities
+            # (same definitions as common.metrics.probability_metrics).
+            **{k: v for k, v in probability_metrics(y_test, probabilities).items()
+               if k != "brier"},
             "cost_default": cost(y_test, probabilities, 0.5),
             "cost_theory": cost(y_test, probabilities, 1 / 6),
             "cost_reject_all": cost(
